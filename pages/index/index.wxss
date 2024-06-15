@@ -1,0 +1,93 @@
+/**index.wxss**/
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+.list-container {
+  flex: 1;
+  padding: 10px;
+  border-bottom: 1px solid #eaeaea;
+  box-sizing: border-box;
+}
+
+.list-item {
+  padding: 10px;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-container {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.icon-container {
+  position: relative;
+  width: 58px;
+  height: 70px;
+  box-sizing: border-box;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+}
+
+.badge-container {
+  position: absolute;
+  top: 10px;
+  right: 3px;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.badge{
+  border:1px solid #fff;
+  border-radius: 50%;
+  background-color: red;
+  font-size: 8px;
+  color: #fff;
+  width: 12px;
+  height: 12px;
+  top: 15%;
+  right: 16%;
+  text-align: center;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.submit-button {
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 7px;
+  text-align: center;
+  width: 48%;
+  height: 28px;
+  background: linear-gradient(270deg, #FF416C 0%,#FF4B2B 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-button .text {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 14px;
+}

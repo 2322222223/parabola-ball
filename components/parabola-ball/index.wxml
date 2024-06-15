@@ -1,0 +1,2 @@
+<view class="container animation" wx:if="{{show}}" style="{{style}}" bindanimationend="onAnimaEnd">
+</view>

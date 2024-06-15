@@ -1,0 +1,72 @@
+
+/* 小球的样式,可自定义修改 默认红色*/
+.container {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  position: fixed;
+  z-index: 999;
+  left: var(--startX);
+  top: var(--startY);
+  background-color: red; 
+}
+
+@keyframes top-y {
+  0% {
+    top: var(--startY);
+  }
+  100% {
+    top: calc(var(--startY) - 10px);
+  }
+}
+
+@keyframes drop-y {
+  0% {
+    top: calc(var(--startY) - 10px);
+  }
+  100% {
+    top: var(--endY);
+  }
+}
+
+@keyframes throwX {
+  0% {
+    left: var(--startX);
+  }
+  100% {
+    left: var(--endX);
+  }
+}
+
+/* 下落过程执行缩放 */
+@keyframes scale-size {
+  0% {
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@keyframes show-hide {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animation {
+  animation-fill-mode: forwards;
+  animation: top-y 0.3s cubic-bezier(0, 0.3, 0.3, 1) forwards, 
+             drop-y 0.4s cubic-bezier(0.7, 0, 1, 0.7) 0.3s forwards,
+             scale-size 0.3s cubic-bezier(0.48, 0.33, 0.24, 1.18) 0.3s forwards, 
+             throwX 0.7s linear forwards, 
+             show-hide 0.7s linear forwards;
+}

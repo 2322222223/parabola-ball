@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="page">
+
+  <!-- 上方列表 -->
+  <scroll-view class="list-container" scroll-y="true">
+    <block wx:for="{{dataList}}" wx:key="id">
+      <view class="list-item" bind:tap="selectGoods">
+        <text>{{item.text}}</text>
+        <text>{{item.info['能量']}}</text>
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 下方图标和按钮 -->
+  <view class="bottom-container">
+    <view class="icon-container">
+      <image src="/assets/add_eat.png" class="icon"></image>
+      <view class="badge-container" wx:if="{{count > 0}}">
+        <text class="badge">{{count}}</text>
+      </view>
+    </view>
+    <view class="submit-button"><text class="text">去结账</text></view>
+  </view>
+  
+</view>
+
+<!-- 抛物线动画 -->
+<ball show="{{show}}" startX="{{startX}}" startY="{{startY}}" bind:animationHasDone="handleAnimationEnd">
+</ball>

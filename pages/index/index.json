@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "ball": "/components/parabola-ball/index"
+  }
+}
